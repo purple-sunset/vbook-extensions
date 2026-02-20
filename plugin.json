@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "author": "purple_sunset",
+    "description": ""
+  },
+  "data": [
+    {
+      "name": "Truyện Net",
+      "author": "purple_sunset",
+      "path": "https://raw.githubusercontent.com/purple-sunset/vbook-extensions/main/truyennet/plugin.zip",
+      "version": 1,
+      "source": "https://truyennet.vn",
+      "icon": "https://raw.githubusercontent.com/purple-sunset/vbook-extensions/main/truyennet/icon.png",
+      "description": "Đọc truyện trên trang Truyện Net",
+      "type": "novel",
+      "locale": "vi_VN"
+    }
+  ]
+}
