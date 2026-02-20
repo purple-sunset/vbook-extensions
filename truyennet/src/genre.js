@@ -1,6 +1,6 @@
 load('config.js');
 function execute() {
-    let response = fetch(url);
+    let response = fetch(BASE_URL);
     if (response.ok) {
         let doc = response.html();
         let genre = [];
