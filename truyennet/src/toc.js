@@ -1,15 +1,17 @@
 load('config.js');
 function execute(url) {
-    let response = fetch(url);
+    let response = fetch(BASE_URL + url);
     if(response.ok) {
         let json = response.json();
 
         if(!json || !json.data) {
-            return Response.error("API response không hợp lệ: " + json);
+            return null;
         }
         
+        let doc = Html.parse(json.data);
+
         let chapters = [];
-        Html.parse(json.data).select("ul li a").forEach(e => {
+        doc.select("ul li a").forEach(e => {
             chapters.push({
                 name: e.text(),
                 url: e.attr("href"),
