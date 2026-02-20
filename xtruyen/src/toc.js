@@ -1,16 +1,16 @@
 load('config.js');
 function execute(url) {
-    let bookId = url.split("||")[0];
-    let dataValue = url.split("||")[1];
+    let bookId = url.split("||")[1];
+    let dataValue = url.split("||")[2];
     let page = dataValue.split("-to-");
 
     let response = fetch(BASE_URL + '/wp-admin/admin-ajax.php', {
         method: 'POST',
         body: {
-            action: 'load_chapter_list_from_to',
-            manga_id: bookId,
-            from: page[0],
-            to: page[1]
+            "action": 'load_chapter_list_from_to',
+            "manga_id": bookId,
+            "from": page[0],
+            "to": page[1]
         }
     });
 

@@ -4,7 +4,7 @@ function execute() {
         {
             title: "Mới Cập Nhật",
             script: "gen.js",
-            input: BASE_URL + "truyen/?m_orderby=latest"
+            input: BASE_URL + "/truyen/?m_orderby=latest"
         },
         {
             title: "Truyện Hot",

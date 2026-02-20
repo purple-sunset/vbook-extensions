@@ -7,7 +7,7 @@ function execute() {
         doc.select(".genres_wrap .widget-content .genres ul > li").forEach(e => {
             genre.push({
                 title: e.select("a").text(),
-                input: BASE_URL + e.select("a").attr("href"),
+                input: e.select("a").attr("href"),
                 script: "gen.js"
             });
         });

@@ -7,7 +7,7 @@ function execute(url) {
 
         let list = [];
         doc.select(".page-content-listing ul.version-chap > li").forEach(e => 
-            list.push(bookId + "||" + e.attr("data-value"))
+            list.push(url + "||" + bookId + "||" + e.attr("data-value"))
         );
 
         return Response.success(list);
