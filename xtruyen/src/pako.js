@@ -1112,10 +1112,10 @@
                 (a.status === bt && e !== V)
             )
                 return gt(t, 0 === t.avail_out ? nt : at);
-            const i = a.last_flush;
+            const ic = a.last_flush;
             if (((a.last_flush = e), 0 !== a.pending)) {
                 if ((xt(t), 0 === t.avail_out)) return ((a.last_flush = -1), tt);
-            } else if (0 === t.avail_in && pt(e) <= pt(i) && e !== V)
+            } else if (0 === t.avail_in && pt(e) <= pt(ic) && e !== V)
                 return gt(t, nt);
             if (a.status === bt && 0 !== t.avail_in) return gt(t, nt);
             if (
