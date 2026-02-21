@@ -1,6 +1,7 @@
 load('config.js');
 load('crypto.js');
 load('pako.js');
+load('base64.js');
 function execute(url) {
     let response = fetch(url);
     if(response.ok) {
