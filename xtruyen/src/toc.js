@@ -28,5 +28,10 @@ function execute(url) {
         return Response.success(chapters);
     }
 
+    if(response.status == 429) {
+        sleep(1000);
+        return execute(url);
+    }
+
     return Response.error("Fail to fetch book " + bookId + ", from: " + page[0] + " to: " + page[1] + ", status: " + response.status);
 }
