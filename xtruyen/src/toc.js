@@ -28,5 +28,5 @@ function execute(url) {
         return Response.success(chapters);
     }
 
-    return null;
+    return Response.error("Fail to fetch book " + bookId + ", from: " + page[0] + " to: " + page[1] + ", status: " + response.status);
 }
