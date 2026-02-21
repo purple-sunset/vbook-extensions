@@ -4,7 +4,7 @@ function execute() {
     if (response.ok) {
         let doc = response.html();
         let genre = [];
-        doc.select(".genres_wrap .widget-content .genres ul > li").forEach(e => {
+        doc.select(".main-menu ul.main-navbar > li:nth-child(3) > ul.sub-menu > li").forEach(e => {
             genre.push({
                 title: e.select("a").text(),
                 input: e.select("a").attr("href"),
