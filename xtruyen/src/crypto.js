@@ -1,6 +1,4 @@
 function decryptText(encryptedText) {
-    console.log("encrypted text: " + encryptedText);
-
     const _0x2d6e55 = _0x27b9;
     (function(_0x20d1a8, _0x5b1192) {
         const _0x55ad93 = _0x27b9,
@@ -16,8 +14,6 @@ function decryptText(encryptedText) {
         }
     }(_0x220d, 0x77cb2));
 
-    console.log("s1");
-
     function _0x27b9(_0x26e2fd, _0x594293) {
         _0x26e2fd = _0x26e2fd - 0x116;
         const _0x220d3b = _0x220d();
@@ -26,8 +22,6 @@ function decryptText(encryptedText) {
     }
     const s = _0x2d6e55(0x122);
     const c = _0x2d6e55(0x121);
-
-    console.log("s2");
 
     function _0x220d() {
         const _0x15f240 = ['2675428jUFFOA', '2855208tQIFTO', '4444880SOZuHQ', '10OBZBnm', '547364QnEXiG', '5705028fiwQVx', '15773530mbbHhi', 'indexOf', 'charCodeAt', '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_', 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/', '62HpshDc', '11897UOrruh', 'string', 'inflate', '9AvAmRl', 'from'];
@@ -42,18 +36,12 @@ function decryptText(encryptedText) {
         translated += idx > -0x1 ? s[idx] : char;
     }
 
-    console.log("s3");
-
     const binary = Uint8Array[_0x2d6e55(0x117)](atob(translated), _0x1de42c => _0x1de42c[_0x2d6e55(0x120)](0x0));
     let text = pako[_0x2d6e55(0x126)](binary, {
         'to': _0x2d6e55(0x125)
     });
 
-    console.log("s4");
-
     text = text.replace(/(&nbsp;)*(\s*<br\s*\/?>\s*){2,}/gi, "<br><br>");
 
-    console.log("s5");
-    
     return text.trim();
 }

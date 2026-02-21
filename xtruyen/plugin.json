@@ -2,7 +2,7 @@
   "metadata": {
     "name": "X Truyện",
     "author": "purple_sunset",
-    "version": 7,
+    "version": 8,
     "source": "https://xtruyen.vn",
     "regexp": "(www.)?xtruyen.vn/[^/]+/?$",
     "description": "Đọc truyện trên trang X Truyện",
