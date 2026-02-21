@@ -1,11 +1,11 @@
 load('config.js');
 
 function execute(key, page) {
-    if (!page) page = 0;
-
+    if (!page) page = '0';
 
     let response = !page ? fetch(BASE_URL + "/?s=" + key + "&post_type=wp-manga") : fetch(BASE_URL + '/wp-admin/admin-ajax.php', {
         method: 'POST',
+        headers: { "user-agent": UserAgent.chrome() },
         body: {
             "action": "madara_load_more",
             "template": "madara-core/content/content-search",
@@ -36,7 +36,7 @@ function execute(key, page) {
             })
         );
 
-        return Response.success(novelList, page + 1);
+        return Response.success(novelList, parseInt(page) + 1);
     }
     return null;
 }

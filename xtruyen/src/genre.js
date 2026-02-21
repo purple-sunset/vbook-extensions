@@ -7,7 +7,7 @@ function execute() {
         doc.select(".main-menu ul.main-navbar > li:nth-child(3) > ul.sub-menu > li").forEach(e => {
             genre.push({
                 title: e.select("a").text(),
-                input: e.select("a").attr("href"),
+                input: BASE_URL + e.select("a").attr("href"),
                 script: "gen.js"
             });
         });
