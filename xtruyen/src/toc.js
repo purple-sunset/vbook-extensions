@@ -6,7 +6,7 @@ function execute(url) {
 
     let response = fetch(BASE_URL + '/wp-admin/admin-ajax.php', {
         method: 'POST',
-        headers: { "user-agent": UserAgent.chrome() },
+        headers: { "user-agent": UserAgent.system() },
         body: {
             "action": 'load_chapter_list_from_to',
             "manga_id": bookId,

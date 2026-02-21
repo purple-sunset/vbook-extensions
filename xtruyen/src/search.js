@@ -5,7 +5,7 @@ function execute(key, page) {
 
     let response = !page ? fetch(BASE_URL + "/?s=" + key + "&post_type=wp-manga") : fetch(BASE_URL + '/wp-admin/admin-ajax.php', {
         method: 'POST',
-        headers: { "user-agent": UserAgent.chrome() },
+        headers: { "user-agent": UserAgent.system() },
         body: {
             "action": "madara_load_more",
             "template": "madara-core/content/content-search",
